@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portal Game</title>
+
+    <link rel="stylesheet" type="text/css" href="../../common/style.css">
+
+    <script type="text/javascript" src="../../lib/gl-matrix-min.js"></script>
+    <script type="module" src="Portal_Game.js"></script>
+</head>
+<body>
+    <style>
+        #message{
+          background-color: darkcyan;
+          border: 1px solid black;
+          padding: 10px;
+      }
+      #gameover{
+            background-color: chartreuse;
+            border: 2px dashed black;
+            padding: 65px;
+        }
+        #gameover p{
+            font-size: large;
+        }
+    </style>
+    <div class="fullscreen no-touch">
+        <canvas></canvas>
+    </div>
+
+    <div id="message" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <p>Igra je zaustavljena</p>
+        <p>Kliknite na zaslon za nadaljevanje</p>
+    </div>
+
+    <div id="gameover" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <p>Igra je zaključena</p>
+    </div>  
+          
+    <div class="fullscreen overlay loader-container">
+        <div class="loader"></div>
+    </div>
+</body>
+</html>
